@@ -168,7 +168,7 @@ static uint forcemousemod = ShiftMask;
  */
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
-		"xurls | custom_dmenu -w $WINDOWID | xargs -r firefox",
+		"xurls | custom_dmenu -l 20 -w $WINDOWID | xargs -r firefox",
 		"externalpipe", NULL };
 
 static MouseShortcut mshortcuts[] = {
