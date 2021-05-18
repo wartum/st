@@ -1265,7 +1265,7 @@ tmoveto(int x, int y)
 }
 
 void
-tsetchar(Rune u, const Glyph *attr, int x, int y)
+tsetchar(Rune u, Glyph *attr, int x, int y)
 {
 	static const char *vt100_0[62] = { /* 0x41 - 0x7e */
 		"↑", "↓", "→", "←", "█", "▚", "☃", /* A - G */
@@ -1429,7 +1429,7 @@ tdefcolor(const int *attr, int *npar, int l)
 }
 
 void
-tsetattr(const int *attr, int l)
+tsetattr(int *attr, int l)
 {
 	int i;
 	int32_t idx;
